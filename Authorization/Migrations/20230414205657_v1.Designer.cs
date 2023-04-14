@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Authorization.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20230414091223_v1")]
+    [Migration("20230414205657_v1")]
     partial class v1
     {
         /// <inheritdoc />
@@ -30,10 +30,6 @@ namespace Authorization.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Login")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("TEXT");
 

@@ -5,10 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Authorization"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
+        Title="MainWindow" Height="650" Width="600"
         xmlns:ui="http://schemas.modernwpf.com/2019"
-        ui:WindowHelper.UseModernWindowStyle="True">
-    <Grid >
-        
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+
+    <Grid Background="#7CFC00">
+        <Border VerticalAlignment="Center" Width="550">
+            <StackPanel>
+                <Grid Margin="0 0 0 20" >
+                    <Button x:Name="btn_in"  HorizontalAlignment="Left"  Style="{StaticResource MaterialDesignFlatSecondaryDarkBgButton}" Content="Sign In"   Height="32" Width="100"  Cursor="Hand"/>
+                    <Button x:Name="btn_up" Click="btn_up_Click" HorizontalAlignment="Right"  Style="{StaticResource MaterialDesignOutlinedDarkButton}" Content="Sign Up"  Width="100"  Height="32"  />
+                </Grid>
+                <TextBox Text="{Binding LoginOrLogin}" materialDesign:HintAssist.Hint="Введите логин или почту"  FontSize="15" Style="{StaticResource MaterialDesignFilledTextBox}"/>
+                <TextBox Text="{Binding Password}" materialDesign:HintAssist.Hint="Введите пароль"  FontSize="15" Style="{StaticResource MaterialDesignFilledTextBox}"/>
+                <TextBlock Text="Запомнить меня?" FontSize="15" Style="{StaticResource MaterialDesignPasswordCharacterCounterTextBlock}"/>
+                <RadioButton Margin="0 5"  Style="{StaticResource MaterialDesignSwitchToggleButton}" HorizontalAlignment="Left" Height="25" Width="61"/>
+                <Line X1="0" Y1="150" X2="550" Y2="150" Stroke="#483D8B"/>
+                <Button x:Name="btn_rstpas" Content="Забыли пароль?" Style="{StaticResource MaterialDesignFlatButton}" />
+            </StackPanel>
+        </Border>
     </Grid>
 </Window>

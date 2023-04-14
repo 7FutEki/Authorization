@@ -30,10 +30,6 @@ namespace Authorization.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("Password")
                         .IsRequired()
                         .HasColumnType("TEXT");

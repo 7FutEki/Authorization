@@ -16,6 +16,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Authorization.Windows;
 
 namespace Authorization
 {
@@ -28,8 +29,16 @@ namespace Authorization
         {
             InitializeComponent();
             ApplicationContext db = new ApplicationContext();
-            ThemeManager.Current.ApplicationTheme = ApplicationTheme.Dark;
             db.Database.Migrate();
         }
+
+        
+
+        private void btn_up_Click(object sender, RoutedEventArgs e)
+        {
+            Sign_Up sign_Up = new Sign_Up();
+            Close();
+            sign_Up.ShowDialog();
+        } 
     }
 }
